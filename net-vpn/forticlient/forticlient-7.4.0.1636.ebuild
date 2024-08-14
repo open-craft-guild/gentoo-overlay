@@ -106,22 +106,36 @@ src_install() {
 		opt/forticlient/fazlogupload \
 		opt/forticlient/fchelper \
 		opt/forticlient/fctsched \
+		opt/forticlient/firewall \
 		opt/forticlient/fmon \
 		opt/forticlient/forticlient-cli \
+		opt/forticlient/FortiGuardAgent \
 		opt/forticlient/fortitray \
 		opt/forticlient/fortitraylauncher \
 		opt/forticlient/fortivpn \
-		opt/forticlient/vpn \
+		opt/forticlient/iked \
+		opt/forticlient/legacy.so \
 		opt/forticlient/libav.so \
 		opt/forticlient/libvcm.so \
 		opt/forticlient/scanunit \
 		opt/forticlient/update \
-		opt/forticlient/update_tls \
+		opt/forticlient/vpn \
 		opt/forticlient/vulscan \
+		opt/forticlient/webfilter \
 		opt/forticlient/ztproxy
 
 	insinto /opt/forticlient
-	doins opt/forticlient/.config.db.init
+	doins opt/forticlient/.config.db.init \
+		opt/forticlient/exe.manifest \
+		opt/forticlient/FGD_category_list.json \
+		opt/forticlient/icdb \
+		opt/forticlient/isdb_app.txt \
+		opt/forticlient/isdb_map.dat \
+		opt/forticlient/start_fortitray_launcher.sh \
+		opt/forticlient/stop-forticlient.sh \
+		opt/forticlient/TLS_whitelist.json \
+		opt/forticlient/unlock-gui.sh \
+		opt/forticlient/wf_intercepted_apps.json
 
 	insinto /opt/forticlient/images
 	doins -r opt/forticlient/images/.
