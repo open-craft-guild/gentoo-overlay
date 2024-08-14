@@ -149,15 +149,14 @@ src_install() {
 	insinto /opt/forticlient/vir_sig
 	doins opt/forticlient/vir_sig/vir_high
 
-	fperms +x /opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libEGL.so \
-		/opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libGLESv2.so \
-		/opt/forticlient/gui/FortiClient-linux-x64/FortiClient \
+	fperms +x  /opt/forticlient/gui/FortiClient-linux-x64/FortiClient \
+		/opt/forticlient/gui/FortiClient-linux-x64/chrome_crashpad_handler \
 		/opt/forticlient/gui/FortiClient-linux-x64/chrome-sandbox \
 		/opt/forticlient/gui/FortiClient-linux-x64/libEGL.so \
-		/opt/forticlient/gui/FortiClient-linux-x64/libGLESv2.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libffmpeg.so \
+		/opt/forticlient/gui/FortiClient-linux-x64/libGLESv2.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libvk_swiftshader.so \
-		/opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so
+		/opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so.1
 
 	dodir /opt/bin
 	dosym ../forticlient/gui/FortiClient-linux-x64/FortiClient opt/bin/FortiClient
