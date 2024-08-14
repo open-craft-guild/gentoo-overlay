@@ -131,7 +131,7 @@ src_install() {
 		opt/forticlient/icdb \
 		opt/forticlient/isdb_app.txt \
 		opt/forticlient/isdb_map.dat \
-		opt/forticlient/start_fortitray_launcher.sh \
+		opt/forticlient/start-fortitray-launcher.sh \
 		opt/forticlient/stop-forticlient.sh \
 		opt/forticlient/TLS_whitelist.json \
 		opt/forticlient/unlock-gui.sh \
