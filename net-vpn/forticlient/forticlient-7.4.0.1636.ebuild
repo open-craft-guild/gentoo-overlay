@@ -8,7 +8,7 @@ inherit bash-completion-r1 desktop multilib-build pax-utils systemd unpacker xdg
 DESCRIPTION="Fortinet VPN client"
 HOMEPAGE="https://www.fortinet.com/products/endpoint-security/forticlient"
 
-SRC_URI="https://repo.fortinet.com/repo/$(ver_cut 1-2)/debian/pool/non-free/f/${PN}/${PN}_${PV}_amd64.deb"
+SRC_URI="https://repo.fortinet.com/repo/${PN}/$(ver_cut 1-2)/ubuntu22/pool/non-free/f/${PN}/${PN}_${PV}_amd64.deb"
 
 LICENSE="Fortinet"
 SLOT="0"
