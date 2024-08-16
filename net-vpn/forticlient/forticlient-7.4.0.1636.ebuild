@@ -140,6 +140,9 @@ src_install() {
 	insinto /opt/forticlient/images
 	doins -r opt/forticlient/images/.
 
+	insinto /opt/forticlient/tpm2
+	doins -r opt/forticlient/tpm2/.
+
 	insinto /opt/forticlient/gui/FortiClient-linux-x64
 	doins -r opt/forticlient/gui/FortiClient-linux-x64/.
 
