@@ -48,28 +48,6 @@ RDEPEND="app-accessibility/at-spi2-atk:2[${MULTILIB_USEDEP}]
 	x11-libs/pango:0[${MULTILIB_USEDEP}]
 	appindicator? ( dev-libs/libayatana-appindicator )"
 
-		opt/forticlient/epctrl \
-		opt/forticlient/fazlogupload \
-		opt/forticlient/fchelper \
-		opt/forticlient/fctdns \
-		opt/forticlient/fctsched \
-		opt/forticlient/firewall \
-		opt/forticlient/fmon \
-		opt/forticlient/forticlient-cli \
-		opt/forticlient/FortiGuardAgent \
-		opt/forticlient/fortitray \
-		opt/forticlient/fortivpn \
-		opt/forticlient/iked \
-		opt/forticlient/legacy.so \
-		opt/forticlient/libav.so \
-		opt/forticlient/libvcm.so \
-		opt/forticlient/scanunit \
-		opt/forticlient/update \
-		opt/forticlient/vpn \
-		opt/forticlient/vulscan \
-		opt/forticlient/webfilter \
-		opt/forticlient/ztproxy
-
 QA_PREBUILT="opt/forticlient/fortitraylauncher
 	opt/forticlient/epctrl
 	opt/forticlient/fazlogupload
@@ -190,6 +168,10 @@ src_install() {
 		/opt/forticlient/gui/FortiClient-linux-x64/libGLESv2.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libvk_swiftshader.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so.1
+
+	fperms +x /opt/forticlient/tpm2/bin/tpm2 \
+		/opt/forticlient/tpm2/tpm2_ptool/exe.linux-x86_64-3.7/tpm2_ptool
+
 
 	dodir /opt/bin
 	dosym ../forticlient/gui/FortiClient-linux-x64/FortiClient opt/bin/FortiClient
