@@ -48,21 +48,50 @@ RDEPEND="app-accessibility/at-spi2-atk:2[${MULTILIB_USEDEP}]
 	x11-libs/pango:0[${MULTILIB_USEDEP}]
 	appindicator? ( dev-libs/libayatana-appindicator )"
 
+		opt/forticlient/epctrl \
+		opt/forticlient/fazlogupload \
+		opt/forticlient/fchelper \
+		opt/forticlient/fctdns \
+		opt/forticlient/fctsched \
+		opt/forticlient/firewall \
+		opt/forticlient/fmon \
+		opt/forticlient/forticlient-cli \
+		opt/forticlient/FortiGuardAgent \
+		opt/forticlient/fortitray \
+		opt/forticlient/fortivpn \
+		opt/forticlient/iked \
+		opt/forticlient/legacy.so \
+		opt/forticlient/libav.so \
+		opt/forticlient/libvcm.so \
+		opt/forticlient/scanunit \
+		opt/forticlient/update \
+		opt/forticlient/vpn \
+		opt/forticlient/vulscan \
+		opt/forticlient/webfilter \
+		opt/forticlient/ztproxy
+
 QA_PREBUILT="opt/forticlient/fortitraylauncher
-	opt/forticlient/update
-	opt/forticlient/fctsched
-	opt/forticlient/fortivpn
-	opt/forticlient/scanunit
-	opt/forticlient/fazlogupload
-	opt/forticlient/vulscan
-	opt/forticlient/update_tls
-	opt/forticlient/fortitray
-	opt/forticlient/confighandler
-	opt/forticlient/vpn
 	opt/forticlient/epctrl
-	opt/forticlient/libav.so
+	opt/forticlient/fazlogupload
+	opt/forticlient/fchelper
+	opt/forticlient/fctdns
+	opt/forticlient/fctsched
+	opt/forticlient/firewall
 	opt/forticlient/fmon
-	opt/forticlient/fchelper"
+	opt/forticlient/forticlient-cli
+	opt/forticlient/FortiGuardAgent
+	opt/forticlient/fortitray
+	opt/forticlient/fortivpn
+	opt/forticlient/iked
+	opt/forticlient/legacy.so
+	opt/forticlient/libav.so
+	opt/forticlient/libvcm.so
+	opt/forticlient/scanunit
+	opt/forticlient/update
+	opt/forticlient/vpn
+	opt/forticlient/vulscan
+	opt/forticlient/webfilter
+	opt/forticlient/ztproxy"
 QA_FLAGS_IGNORED="opt/forticlient/forticlient-cli
 	opt/forticlient/libvcm.so
 	opt/forticlient/ztproxy
@@ -105,6 +134,7 @@ src_install() {
 		opt/forticlient/epctrl \
 		opt/forticlient/fazlogupload \
 		opt/forticlient/fchelper \
+		opt/forticlient/fctdns \
 		opt/forticlient/fctsched \
 		opt/forticlient/firewall \
 		opt/forticlient/fmon \
@@ -118,6 +148,8 @@ src_install() {
 		opt/forticlient/libav.so \
 		opt/forticlient/libvcm.so \
 		opt/forticlient/scanunit \
+		opt/forticlient/start-fortitray-launcher.sh \
+		opt/forticlient/unlock-gui.sh \
 		opt/forticlient/update \
 		opt/forticlient/vpn \
 		opt/forticlient/vulscan \
@@ -131,10 +163,8 @@ src_install() {
 		opt/forticlient/icdb \
 		opt/forticlient/isdb_app.txt \
 		opt/forticlient/isdb_map.dat \
-		opt/forticlient/start-fortitray-launcher.sh \
 		opt/forticlient/stop-forticlient.sh \
 		opt/forticlient/TLS_whitelist.json \
-		opt/forticlient/unlock-gui.sh \
 		opt/forticlient/wf_intercepted_apps.json
 
 	insinto /opt/forticlient/images
