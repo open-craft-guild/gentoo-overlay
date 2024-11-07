@@ -108,7 +108,9 @@ src_install() {
 		opt/forticlient/Fortitray.desktop
 
 	exeinto /opt/forticlient
-	doexe opt/forticlient/confighandler \
+	doexe opt/forticlient/certd \
+		opt/forticlient/confighandler \
+		opt/forticlient/edrcomm \
 		opt/forticlient/epctrl \
 		opt/forticlient/fazlogupload \
 		opt/forticlient/fchelper \
@@ -135,7 +137,8 @@ src_install() {
 		opt/forticlient/ztproxy
 
 	insinto /opt/forticlient
-	doins opt/forticlient/.config.db.init \
+	doins opt/forticlient/.acl \
+		opt/forticlient/.config.db.init \
 		opt/forticlient/exe.manifest \
 		opt/forticlient/FGD_category_list.json \
 		opt/forticlient/icdb \
@@ -169,8 +172,7 @@ src_install() {
 		/opt/forticlient/gui/FortiClient-linux-x64/libvk_swiftshader.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so.1
 
-	fperms +x /opt/forticlient/tpm2/bin/tpm2 \
-		/opt/forticlient/tpm2/tpm2_ptool/exe.linux-x86_64-3.7/tpm2_ptool
+	fperms +x /opt/forticlient/tpm2/bin/tpm2
 
 
 	dodir /opt/bin
