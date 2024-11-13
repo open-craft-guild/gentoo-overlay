@@ -1,4 +1,4 @@
 # Oleksandr Kovalchuk <anxolerd@outlook.com> (2024-11-12)
 # This version (7.4.1) breaks VPN connections
 # It is also does not register properly and writes too much debug logs
-~net-vpn/forticlient-7.4.1.1697
+=net-vpn/forticlient-7.4.1.1697
