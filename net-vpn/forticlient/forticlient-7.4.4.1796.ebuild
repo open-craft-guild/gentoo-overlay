@@ -18,7 +18,7 @@ RESTRICT="bindist mirror"
 
 RDEPEND="app-accessibility/at-spi2-atk:2[${MULTILIB_USEDEP}]
 	app-crypt/libsecret:0[${MULTILIB_USEDEP}]
-	app-arch/gzip[${MULTILIB_USEDEP}]
+	app-arch/gzip
 	dev-libs/atk:0[${MULTILIB_USEDEP}]
 	dev-libs/expat:0[${MULTILIB_USEDEP}]
 	dev-libs/glib:2[${MULTILIB_USEDEP}]
